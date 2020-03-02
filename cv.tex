@@ -1,0 +1,322 @@
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0.3,0.3,0.3}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+%WATERMARK TEST [**not part of a CV**]---------------
+%\font\wm=''Baskerville:color=787878'' at 8pt
+%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+%{\wm 
+%	\begin{textblock}{1}(0,0)
+%		\rotatebox{-90}{\parbox{500mm}{
+%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
+%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
+%		}
+%	}
+%	\end{textblock}
+%}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge Federico\textsc{ Claudi}
+	}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\section{Personal Data}
+
+\begin{tabular}{rl}
+    \textsc{Place and Date of Birth:} & Milano, Italy  | 21 March 1993 \\
+    \textsc{Address:}   & 13 Upper Hawkwell Walk, N1 8TQ, London, UK \\
+    \textsc{Phone:}     & +39 345 0134878\\
+    \textsc{email:}     & \href{mailto:federico.claudi.17@ucl.ac.uk}{federico.claudi.17@ucl.ac.uk} \\
+    \textsc{alternative email:}     & \href{mailto:federicoclaudo@protonmail.com}{federicoclaudi@protonmail.com} \\
+\end{tabular}
+\\
+
+%Section: Education
+\section{Education}
+\begin{tabular}{rl}	
+
+
+\textsc{2017 - present} & PhD in "Experimental and theoretical systems neuroscience" \\& 
+\normalsize\textbf{Sainsbury Wellcome Centre, University College London}, London, UK.\\
+& \small Supervisor: Dr. Tiago Branco\\
+\\&\\
+
+\textsc{2015 - 2016}& Master in Research in "Integrative Neuroscience" \\& 
+\normalsize\textbf{University of Edinburgh}, Edinburgh, UK.\\
+& \small Supervisor: Dr. Ian Duguid\\
+& \small Master project title: Characterising the role of dopamine in mouse motor cortex for\\
+& the control of skilled motor movements.\\
+&\textsc{Gpa}: 3.97/4 \hyperlink{grds_usc}{\hfill| \footnotesize Detailed List of Exams}
+\\&\\
+
+\textsc{2012 - 2015}& Bachelor in "Medical Biotechnologies" \\& 
+\normalsize\textbf{Università degli Studi}, Milano, Italy.\\
+& \small Dissertation project title: The role of CXCL4 in the differentation of M4 macrophages.\\
+&\textsc{Final Grade}: 107/110 | \textsc{Gpa}: 3.34/4 \hyperlink{grds_usc}{\hfill| \footnotesize Detailed List of Exams}
+\\&\\
+
+\end{tabular}
+
+%Section: Work Experience at the top
+\section{Research Experience}
+\begin{tabular}{r|p{11cm}}
+
+    2017 - present & PhD student in the laboratory of Dr. Tiago Branco.  \\&
+    \normalsize\textbf{Sainsbury Wellcome Centre, University College London}, London, UK.
+    \\\multicolumn{2}{c}{} \\
+ 
+    2016 - 2017 & Visiting scientist in the laboratory of Dr. Ian Duguid.  \\&
+    \normalsize\textbf{University of Edinburgh}, Edinburgh, UK.
+    \\\multicolumn{2}{c}{} \\
+ 
+    2015 - 2016 & Master project in the laboratory of Dr. Ian Duguid.  \\&
+    \normalsize\textbf{University of Edinburgh}, Edinburgh, UK.
+    \\\multicolumn{2}{c}{} \\
+ 
+    2015 - 2015 & Bachelor dissertation project.  \\&
+    \normalsize\textbf{Katholiege Universitei}, Leuven, Belgium.
+    \\\multicolumn{2}{c}{} \\
+ 
+    2011 - 2011 & Summer internship in the laboratory of Dr. Filippo Mancia.  \\&
+    \normalsize\textbf{Columbia university}, New York City, USA.
+    \\\multicolumn{2}{c}{} \\
+ 
+    2011 - 2011 & Summer internship.  \\&
+    \normalsize\textbf{Università degli Studi}, Milano, Italy.
+    \\\multicolumn{2}{c}{} \\
+    
+    2010 - 2010 & Summer internship in the laboratory of Dr. Filippo Mancia.  \\&
+    \normalsize\textbf{Columbia university}, New York City, USA.
+    \\\multicolumn{2}{c}{} \\
+\end{tabular}
+
+%Section: Extracurricular Education
+\section{Extracurricular study}
+\begin{tabular}{rl}	
+
+    \textsc{2015 - 2015}& Online Course in "Medical Neuroscience" \\& 
+    \normalsize\textbf{Duke University}, USA.\\
+    & \small Attended on: coursera.org\\
+    \\&\\
+
+    \textsc{2015 - 2015}& Online Course in Synapses, Neurons and Brain" \\& 
+    \normalsize\textbf{Hebrew University}, Jerusalem, Israel.\\
+    & \small Attended on: coursera.org\\
+    \\&\\
+
+\end{tabular}
+
+%Section: Publications
+\section{Publications}
+\begin{tabular}{r|p{13cm}}
+
+    2020 & \textit{Brainrender. A python based software for visualisation of neuroanatomical and morphological data} \\&
+        \textbf{Federico Claudi}, Adam L. Tyson, Tiago Branco \\&
+        \textit{bioRxiv (2020)} \url{https://doi.org/10.1101/2020.02.23.96174}.  
+        \\\multicolumn{2}{c}{} \\
+ 
+    2019 & \textit{Cerebellar-recipient motor thalamus drives behavioral context-specific movement initiation} \\&
+        Joshua Dacre, Matt Colligan, Julian Ammer, Julia Schiemann, Thomas Clarke, Victor Chamosa-
+        Pino, \textbf{Federico Claudi}, J. Alex Harston, Constantinos Eleftheriou, Janelle M.P. Pakan, Cheng-Chiu
+        Huang, Adam Hantman, Nathalie L. Rochefort, Ian Duguid \\&
+        \textit{bioRxiv (2019) [Under review at Neuron]} \url{https://doi.org/10.1101/802124}.  \\&
+        
+        \\\multicolumn{2}{c}{} \\
+        
+    2016 & \textit{CXCL4 and CXCL4L1 Differentially Affect Monocyte Survival and Dendritic Cell Differentiation and Phagocytosis.} \\&
+        Gouwy M, Ruytinx P, Radice E, \textbf{Claudi F}, Van Raemdonck K, Bonecchi R \\&
+        \textit{PLoS ONE (2016)} \url{https://doi.org/10.1371/journal.pone.0166006}.  \\&
+        \\\multicolumn{2}{c}{} \\
+\end{tabular}
+
+%Section: teaching
+\section{Teaching \& Mentoring}
+\begin{tabular}{rl}	
+
+    2019 & Teacher at Braincamp \\& 
+    \normalsize\textbf{ATOMI institute}, Pristina, Kosovo.\\& 
+    \small \url{https://www.xhmfoundation.com/braincamp-kosovo-2019}\\
+    \\&\\
+
+    2016 & Training of colleagues in microsurgical and quantitative behavioural techniques \\& 
+    \normalsize\textbf{University of Edinburgh}, Edinburgh, UK.
+    \\&\\
+
+\end{tabular}
+
+%Section: Open source projects
+\section{Open Source Projects}
+\begin{tabular}{rl}	
+
+    \textsc{2020}& Brainrender. \\& 
+    \small A python based software for visualisation of neuroanatomical and morphological data \\& 
+    \small \url{https://github.com/BrancoLab/BrainRender}\\
+    \\&\\
+
+    \textsc{2019}& Scidraw.  \\& 
+    \small A free online repository of high-quality drawings for scientific illustrations. \\& 
+    \small \url{https://scidraw.io/}\\
+    \\&\\
+
+\end{tabular}
+
+\section{Skills and competences}
+\begin{tabular}{r|p{11cm}}
+
+    \textit{Technical skills} & \textit{In vivo} whole cell electrophysiology.  \\&
+        \textit{In vivo} subcortical fiberscope imaging.  \\&
+        Microsurgical techniques.  \\&
+        Anatomical circuit tracing.  \\&
+        Development of bespoke behavioural paradigms. \\&
+        Development of Matlab and Python scripts for the analysis of behavioural and physiological data. \\&
+        Development of Python scripts for the analysis and visualisation of anatomical data. \\&
+        Development of Arduino and Python scripts for the control of behavioural setups and data acquisition. \\&
+        Development and design of websites. \\&
+        3D design and manufacturing.
+        \\\multicolumn{2}{c}{} \\
+     
+  \textit{Programming languages} & Proficient in: Python \\&
+        Intermediated in: Matlab, LaTeX, HTML, CSS, Arduino. \\&
+        Basic in: mysql
+         \\\multicolumn{2}{c}{} \\
+
+  \textit{Languages} & Native in Italian \\&
+        proficient in English (111/120, Toefl test).
+\end{tabular}
+\\
+
+%Section: Fellowships and awards
+\section{Fellowships and awards}
+\begin{tabular}{rl}	
+
+    \textsc{2020}& Wellcome Trust 4-Year PhD Fellowship. \\& 
+    \normalsize\textbf{Sainsbury Wellcome Centre, University College London}, London, UK.
+    \\&\\
+
+    \textsc{2015}& Erasmus scholarship for the bachelor project in Leuven, Belgium.  \\& 
+    \normalsize\textbf{Università degli Studi}, Milano, Italy.
+    \\&\\
+
+\end{tabular}
+
+
+\section{Interests and Activities}
+Technology, Open-Source, Programming\\
+Neuroscience, Physics, Mathematics\\
+Travelling, rock climbing
+
+
+
+\newpage
+\par{\centering\Large \hypertarget{grds}{Master in Research in \textsc{Integrative Neuroscience}}\par}\large{\centering Grades\par}\normalsize
+\begin{center}
+\begin{tabular}{lccc}
+\multicolumn{1}{c}{\textsc{Exam}}&\textsc{Mark}&\textsc{Grade}&\textsc{Credit Hrs}\\ \hline
+    Review of Neuroscience	&61 &B &20\\
+    Research Training I	    &72 &A3 &20\\
+    Research Training II	&75 &A3 &20\\
+    Presenting Neuroscience Research Data	&73 &A3 &20\\
+    Research Proposal	    &75 &A3 &20\\
+    Masters Dissertation	&76 &A3 &80\\
+    & & & & \\
+		& & Total&180\\\cline{3-4}
+        & & \textsc{Gpa}&\textbf{3.97/4.00}
+\end{tabular}
+\end{center}
+\bigskip
+\hrule
+\bigskip
+\bigskip
+\bigskip
+\par{\centering\Large \hypertarget{grds_cleli}{Undergraduate Degree in \textsc{Medical Biotechnologies}}\par}\large{\centering Grades\par}\normalsize
+
+\begin{center}
+\begin{tabular}{lccc}
+\multicolumn{1}{c}{\textsc{Exam}}&\textsc{Mark}&\textsc{Credit Hrs}\\ \hline
+    General and Inorganic Chemistry	                        &20/30  &8\\
+    Mathematics and introduction to informatics	            &30+/30  &6\\
+    General Biology                                         & 25/30 &8 \\
+    Physics                                                 & 29/30 &9 \\
+    Genetics                                                & 25/30 &8 \\
+    Human Anatomy and Histology                             & 30/30 &7 \\
+    Organic Chemistry                                       & 25/30 &8 \\
+    Human Physiology                                        & 30/30 &7 \\
+    Molecular Biology                                       & 30+/30 &7 \\
+    Cellular and Molecular Methodologies                    & 24/30 &10 \\
+    General Pathology and Immunology                        & 26/30 &10 \\
+    Biochemistry and Fundamentals of Human Biochemistry     & 30/30 &11 \\
+    Microbiology and Medical Virology                       & 28/30 &6 \\
+    Bioethical and Legal Issues in Biotechnology            & 26/30 &9 \\
+    Human Molecular Genetics                                & 30/30 &6 \\
+    Biotechnologies in Molecular Diagnostics and Fundamental of Statistics  & 24/30 &9 \\
+    Physiopathology, Introduction in Biotechnologies Diagnostic and Therapy & 26/30 &9 \\
+    Medical Pharmacology                                    & 26/30 &10 \\
+    English                                                 & approved &2 \\
+    Training                                                & approved &8 \\
+    Applications of Biotech on Medicine                     & 24/30 &6 \\
+    Optional Activities                                     & approved &12 \\
+    Final Examination                                       & approved &4 \\
+    & & & \\
+    & Total&180\\\cline{1-3}
+    \textbf{Final Grade}                                    & \textbf{107/110} & \\
+    \textsc{Gpa}                                            &   \textbf{3.34/4.00} & \\
+\end{tabular}
+%\newpage
+%\hypertarget{gmat}{\textsc{Gmat}\setmainfont{LMRoman10 Regular}\textregistered\setmainfont[SmallCapsFont=Fontin-SmallCaps]{Fontin-Regular}}
+
+%\XeTeXpdffile ''GMAT.pdf'' page 1 scaled 800
+
+\end{document}
