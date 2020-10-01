@@ -124,11 +124,35 @@ publications = {
 
 }
 
+posters = {
+    (2020) : [
+        'Fast unsupervised learning and innate heuristics support escape path selection',
+        '[bold green]Federico Claudi[/bold green], Dario Campagner, Tiago Branco',
+        'Bernstein Conference'
+    ]
+}
+
+
+awards = {
+    (2020): [
+        'Wellcome Trust 4-Year PhD Fellowship.',
+        'Sainsbury Wellcome Centre, University College London}, London'
+        ],
+
+    (2015): [
+        'Erasmus scholarship for the bachelor project in Leuven, Belgium. ',
+        'Università degli Studi, Milano, Italy'
+        ],
+}
+
+
+
 
 
 # ! TODO fix links!
+# TODO styling
+
+
 # TODO header
 # TODO open_source_projects
-# TODO publications
-# TODO poster presentation
 # TODO fellowship and awards

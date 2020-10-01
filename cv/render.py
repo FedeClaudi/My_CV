@@ -1,14 +1,14 @@
 from cv.render_utils import render_panel, make_table
-
+from rich.markdown import Markdown
 
 @render_panel
 def render_education(info):
     # Make table
     columns = [
-        ('center', 13, None, 2, '[bold magenta]Date[/bold magenta]'),
-        (None, None, 'italic', 2, '[bold magenta]Title[/bold magenta]'),
+        ('center', 13, None, 1, '[bold magenta]Date[/bold magenta]'),
+        (None, None, 'italic', 1, '[bold magenta]Title[/bold magenta]'),
         (None, None, 'bold', 1, '[bold magenta]Insitute[/bold magenta]'),
-        ('center', None, 'bold', 2, None),
+        ('center', None, 'bold', 1, None),
         (None, None, None, False, '[bold magenta]Supervisor[/bold magenta]'),
     ]
     table = make_table(columns)
@@ -33,8 +33,8 @@ def render_education(info):
 def render_extracurr_education(info):
     # Make table
     columns = [
-        ('center', 13, None, 2, '[bold magenta]Date[/bold magenta]'),
-        (None, None, 'italic', 2, '[bold magenta]Title[/bold magenta]'),
+        ('center', 13, None, 1, '[bold magenta]Date[/bold magenta]'),
+        (None, None, 'italic', 1, '[bold magenta]Title[/bold magenta]'),
         (None, None, 'bold', 1, '[bold magenta]Insitute[/bold magenta]'),
         ('center', None, 'bold', False, None),
 
@@ -59,10 +59,10 @@ def render_extracurr_education(info):
 def render_experience(experience):
     # Make table
     columns = [
-        ('center', 13, None, 2, '[bold magenta]Date[/bold magenta]'),
-        (None, None, 'italic', 2, '[bold magenta]Name[/bold magenta]'),
-        (None, None, 'bold', 2, '[bold magenta]Insitute[/bold magenta]'),
-        (None, None, 'bold', 2, '[bold magenta]Supervisor[/bold magenta]'),
+        ('center', 13, None, 1, '[bold magenta]Date[/bold magenta]'),
+        (None, None, 'italic', 1, '[bold magenta]Name[/bold magenta]'),
+        (None, None, 'bold', 1, '[bold magenta]Insitute[/bold magenta]'),
+        (None, None, 'bold', 1, '[bold magenta]Supervisor[/bold magenta]'),
 
     ]
     table = make_table(columns)
@@ -87,9 +87,9 @@ def render_experience(experience):
 def render_teaching(experience):
     # Make table
     columns = [
-        ('center', 13, None, 2, '[bold magenta]Date[/bold magenta]'),
-        (None, None, 'italic', 2, '[bold magenta]Name[/bold magenta]'),
-        (None, None, 'bold', 2, '[bold magenta]Insitute[/bold magenta]'),
+        ('center', 13, None, 1, '[bold magenta]Date[/bold magenta]'),
+        (None, None, 'italic', 1, '[bold magenta]Name[/bold magenta]'),
+        (None, None, 'bold', 1, '[bold magenta]Insitute[/bold magenta]'),
 
     ]
     table = make_table(columns)
@@ -113,11 +113,11 @@ def render_teaching(experience):
 def render_publications(pubs):
     # Make table
     columns = [
-        ('center', 13, None, 2, '[bold magenta]Date[/bold magenta]'),
-        (None, None, 'italic', 2, '[bold magenta]Title[/bold magenta]'),
-        (None, None, 'bold', 2, '[bold magenta]Authors[/bold magenta]'),
-        (None, None, 'bold', 2, '[bold magenta]Journal[/bold magenta]'),
-        (None, None, 'bold', 2, '[bold magenta]DOI[/bold magenta]'),
+        ('center', 13, None, 1, '[bold magenta]Date[/bold magenta]'),
+        (None, None, 'italic', 1, '[bold magenta]Title[/bold magenta]'),
+        (None, None, 'bold', 1, '[bold magenta]Authors[/bold magenta]'),
+        (None, None, 'bold', 1, '[bold magenta]Journal[/bold magenta]'),
+        (None, None, 'bold', 1, '[bold magenta]DOI[/bold magenta]'),
 
     ]
     table = make_table(columns)
@@ -144,4 +144,66 @@ def render_publications(pubs):
 
 
     # Render
-    return table, 'blue', 'Teaching'
+    return table, 'blue', 'Publications'
+
+
+@render_panel
+def render_posters(pubs):
+    # Make table
+    columns = [
+        ('center', 13, None, 1, '[bold magenta]Date[/bold magenta]'),
+        (None, None, 'italic', 1, '[bold magenta]Title[/bold magenta]'),
+        (None, None, 'bold', 1, '[bold magenta]Authors[/bold magenta]'),
+        (None, None, 'bold', 1, '[bold magenta]Conference[/bold magenta]'),
+
+    ]
+    table = make_table(columns)
+
+    # Populate table
+    for key, (title, authors, conference) in pubs.items():
+        if len(authors) > 100:
+            authors = authors[:96] + ' ...'
+
+            if 'claudi' not in authors.lower():
+                authors += ' [bold green]F. Claudi[/bold green] ...'
+
+        table.add_row(
+            str(key),
+            '',
+            title,
+            "",
+            authors,
+            '',
+            conference,
+        )
+
+    # Render
+    return table, 'white', 'Posters'
+
+@render_panel
+def render_awards(pubs):
+    # Make table
+    columns = [
+        ('center', 13, None, 1, '[bold magenta]Date[/bold magenta]'),
+        (None, None, 'italic', 1, '[bold magenta]Title[/bold magenta]'),
+        (None, None, 'bold', 1, '[bold magenta]Institution[/bold magenta]'),
+
+    ]
+    table = make_table(columns)
+
+    # Populate table
+    for key, (title, institution) in pubs.items():
+        table.add_row(
+            str(key),
+            '',
+            title,
+            "",
+            institution
+        )
+
+    # Render
+    return table, 'white', 'Awards & Fellowships'
+
+
+def render_header():
+    return Markdown('#TITLE\n##subtitle')

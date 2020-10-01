@@ -13,11 +13,12 @@ def render_panel(func):
         table, color, title = func(*args)
         return Panel(
                     table,
-                    title='[bold white]' + title,
-                    title_align='left',
+                    # title='[bold white]' + title,
+                    # title_align='left',
                     border_style=Style.parse(color),
-                    width=250,
+                    width=180,
                     padding=(1, 2, 0, 2),
+                    # expand=False,
                 )
     return wrapper
 
