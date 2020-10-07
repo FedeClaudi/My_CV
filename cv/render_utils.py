@@ -11,15 +11,16 @@ from rich import box
 def render_panel(func):
     def wrapper(*args):      
         table, color, title = func(*args)
-        return Panel(
-                    table,
-                    # title='[bold white]' + title,
-                    # title_align='left',
-                    border_style=Style.parse(color),
-                    width=180,
-                    padding=(1, 2, 0, 2),
-                    # expand=False,
-                )
+        return table
+        # return Panel(
+        #             table,
+        #             # title='[bold white]' + title,
+        #             # title_align='left',
+        #             border_style=Style.parse(color),
+        #             width=180,
+        #             padding=(1, 2, 0, 2),
+        #             # expand=False,
+        #         )
     return wrapper
 
 def make_table(columns):
@@ -31,7 +32,7 @@ def make_table(columns):
             show_footer=False,
             show_edge=False,
             pad_edge=None,
-            expand=False,
+            expand=True,
     )
 
     titles = []

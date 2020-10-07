@@ -1,47 +1,64 @@
 from rich.console import Console
 from rich.pretty import install
 from rich.table import Table
-import pyinspect
+import pyinspect as pi
 
 install()
-# pyinspect.install_traceback()
+pi.install_traceback()
+
+from pyinspect._colors import salmon
 
 
 from .info import *
 from .render import *
 
+
+# TODO color dates nicely
+# TODO highlight titles and names
+# TODO dim other stuff ?
+# TODO make it prettier!
+# TODO clean code
+
+# TODO finish and fill in new info !!
+
+# TODO add link/overview of scholar account
+
 def make():
-    console = Console()
+    hs = 'bold {salmon}'
 
-    table = Table(show_edge=False, show_lines=False, box=None,  show_header=False,
-            show_footer=False,)
-    table.add_column(justify='right', style='bold red', width=15)
-    table.add_column()
+    CV = pi.Report('Federico Claudi - CV')
+    CV.width=(160)
+    
+
+    CV.add(f'[{hs}]         Education:')
+    CV.add(render_education(education), 'obj')
+    
+    CV.spacer(2)
+    CV.add(f'[{hs}]         Extracurricular education')
+    CV.add(render_extracurr_education(extracurr_education), 'obj')
+    
+    CV.spacer(2)
+    CV.add(f'[{hs}]         Research experience')
+    CV.add(render_experience(research_experience), 'obj')
+    
+    CV.spacer(2)
+    CV.add(f'[{hs}]         Teaching experience')
+    CV.add(render_teaching(teaching_experience), 'obj')
+    
+    CV.spacer(2)
+    CV.add(f'[{hs}]         Publications')
+    CV.add(render_publications(publications), 'obj')
+    
+    CV.spacer(2)
+    CV.add(f'[{hs}]         Poster presentations')
+    CV.add(render_posters(posters), 'obj')
+    
+    CV.spacer(2)
+    CV.add(f'[{hs}]         Awards and fellowships')
+    CV.add(render_awards(awards), 'obj')
 
 
-    table.add_row('\n\n[bold]Education:', render_education(education))
-    table.add_row('\n\nExtracurricular education', render_extracurr_education(extracurr_education))
-    table.add_row('\n\nResearch experience', render_experience(research_experience))
-    table.add_row('\n\nTeaching experience', render_teaching(teaching_experience))
-    table.add_row('\n\nPublications', render_publications(publications))
-    table.add_row('\n\nPoster presentations', render_posters(posters))
-    table.add_row('\n\nAwards and fellowships', render_awards(awards))
-
-    console.print(table)
-
-    # console.print(
-    #     render_education(education), 
-    #     render_extracurr_education(extracurr_education),
-    #     render_experience(research_experience),
-    #     render_teaching(teaching_experience),
-    #     render_publications(publications),
-    #     render_posters(posters),
-    #     render_awards(awards),
-
-    #     render_header(),
-
-    #     sep='\n\n'
-    #     )
+    CV.print()
 
 make()
 
