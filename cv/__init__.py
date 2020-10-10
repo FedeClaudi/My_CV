@@ -2,12 +2,10 @@ import pyinspect as pi
 pi.install_traceback()
 
 
-from .make import make_cv
+from .make import make_cv, make_pubs
 
 
-
-# TODO: detailed publications Report
-# TODO: scholar report
+# BIO
 
 # TODO fix links
 # TODO fix header
@@ -17,8 +15,9 @@ from .make import make_cv
 def show():
     CV = make_cv()
 
+    pubs = make_pubs()
 
-    pi.console.print(CV)
+    pi.console.print(CV, pubs)
 
 show()
 
