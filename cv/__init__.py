@@ -2,10 +2,10 @@ import pyinspect as pi
 pi.install_traceback()
 
 
-from .make import make_cv, make_pubs
+from .make import make_cv, make_pubs, make_projs
 
 
-# BIO
+# TODO BIO
 
 # TODO fix links
 # TODO fix header
@@ -13,11 +13,13 @@ from .make import make_cv, make_pubs
 
 
 def show():
-    CV = make_cv()
+    # CV = make_cv()
 
-    pubs = make_pubs()
+    # pubs = make_pubs()
+    
+    # projs = make_projs()
 
-    pi.console.print(CV, pubs)
+    pi.console.print(projs)
 
 show()
 

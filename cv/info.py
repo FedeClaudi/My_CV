@@ -2,6 +2,27 @@ from pyinspect._colors import *
 
 highlight = f'bold italic {lightgreen2}'
 
+
+open_source_projs = {
+    'brainglobe': [
+                'The brainglobe atlas API (BG-AtlasAPI) provides a common interface for programmers to download and process brain atlas data from multiple sources.',
+                'brainglobe/bg-atlasapi',
+                'https://docs.brainglobe.info/bg-atlasapi/usage',
+    ],
+
+    'brainrender': [
+                'brainrender is a python package for the visualization of three dimensional neuro-anatomical data. The goal of brainrender is to facilitate the exploration and dissemination of neuro-anatomical data.',
+                'BrancoLab/BrainRender',
+                'https://docs.brainrender.info/',
+    ],
+
+    'pyinspect': [
+                'description',
+                'FedeClaudi/pyinspect',
+                None,
+    ],
+}
+
 education = {
     (2017, 'now '): [
                         f'PhD in [{highlight}]"Experimental and theoretical systems neuroscience"[/{highlight}]',
