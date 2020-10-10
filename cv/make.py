@@ -35,6 +35,7 @@ def make_projs():
     git = Github("FedeClaudi", gh_pswd)
 
     projs = pi.Report('Open source projects', color=green, accent=green, dim=dimgreen)
+    projs.width = WIDTH
     projs.tb.expand = True
 
     # Sort projs by github stars

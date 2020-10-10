@@ -4,11 +4,7 @@ pi.install_traceback()
 
 from .make import make_cv, make_pubs, make_projs, make_bio
 
-
-# TODO BIO
-
-# TODO fix links
-# TODO fix header
+from rich.console import Console
 
 
 
@@ -25,8 +21,12 @@ def show():
         print('Could not get projs dammit')
         projs = ''
 
+    # To write to text
+    txtconsole = Console(file=open('cv.txt', 'w'))
+    txtconsole.print('\n', bio, '\n', CV,  pubs, projs)
 
-    pi.console.print( '\n', bio, '\n', CV, pubs, projs)
+    # To print to terminal
+    pi.console.print('\n', bio, '\n', CV,  pubs, projs)
 
 
 

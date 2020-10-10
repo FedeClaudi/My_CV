@@ -1,0 +1,170 @@
+
+
+                                                                                                                                                      
+                          name:  Federico Claudi                                                                                                      
+                         email:  federico.claudi.17@ucl.ac.uk                                                                                         
+                                                                                                                                                      
+                       website:  https://fedeclaudi.github.io                                                                                         
+                        github:  https://github.com/FedeClaudi                                                                                        
+                       twitter:  https://twitter.com/Federico_claudi                                                                                  
+
+
+╭────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                    │
+│   Curriculum Vitae                                                                                                                                 │
+│   ────────────────                                                                                                                                 │
+│                                                                                                                                                    │
+│            Education:                                                                                                                              │
+│                                                                                                                                                    │
+│        Date              Title                                                              Supervisor             Insitute                        │
+│   ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────   │
+│    (2017 - now )         PhD in "Experimental and theoretical systems neuroscience"         Dr. Tiago Branco       Sainsbury Wellcome Centre UCL   │
+│    (2015 - 2016)         Master in Research in "Integrative Neuroscience"                   Dr. Ian Duguid         University of Edinburgh         │
+│    (2012 - 2015)         Bachelor in "Medical Biotechnologies"                              Dr. Ian Duguid         University of Edinburgh         │
+│                                                                                                                                                    │
+│                                                                                                                                                    │
+│            Extracurricular education                                                                                                               │
+│                                                                                                                                                    │
+│        Date            Title                                                Insitute                                                               │
+│   ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────   │
+│       2015a            Online Course in "Medical Neuroscience"              Duke University, USA  Attended on: coursera.org                        │
+│       2015b            Online Course in "Synapses, Neurons and Brain"       Hebrew University, Jerusalem, Israel  Attended on: coursera.org        │
+│                                                                                                                                                    │
+│                                                                                                                                                    │
+│                                                                                                                                                    │
+│                                                                                                                                                    │
+│                                                                                                                                                    │
+│                                                                                                                                                    │
+│            Research experience                                                                                                                     │
+│                                                                                                                                                    │
+│        Date              Name                                              Insitute                                      Supervisor                │
+│   ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────   │
+│    (2017 - now )         PhD research project (4 years)                    Sainsbury Wellcome Centre, UK                 Dr. Tiago Branco.         │
+│    (2016 - 2017)         Visiting scientist (1 year)                       University of Edinburgh, UK                   Dr. Ian Duguid.           │
+│    (2015 - 2016)         Master project (1 year)                           University of Edinburgh, UK                   Dr. Ian Duguid.           │
+│    (2015 - 2015)         Bachelor dissertation project (4 months)          Katholiege Universitei, Leuven, Belgium                                 │
+│    (2011 - 2011)         Summer internship (1 month)                       Università degli Studi, Milano, Italy                                   │
+│    (2010 - 2010)         Summer internship (1 month)                       Columbia university, New York City, USA       Dr. Filippo Mancia        │
+│                                                                                                                                                    │
+│                                                                                                                                                    │
+│            Teaching experience                                                                                                                     │
+│                                                                                                                                                    │
+│         Date              Name                                                                          Insitute                                   │
+│   ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────   │
+│         2020              Teaching Assistant at NeuroMatchAcademy.                                      Neuromatch Academy                         │
+│         2019              Teacher at Braincamp                                                          ATOMI institute, Pristina                  │
+│         2016              Training of colleagues in microsurgical and behavioural techniques            University of Edinburgh, Edinburgh         │
+│                                                                                                                                                    │
+│                                                                                                                                                    │
+│            Poster presentations                                                                                                                    │
+│                                                                                                                                                    │
+│        Date            Title                                           Authors                                         Conference                  │
+│   ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────   │
+│        2020            Fast unsupervised learning and innate           Federico Claudi, Dario Campagner, Tiago         Bernstein Conference        │
+│                        heuristics support escape path selection        Branco                                                                      │
+│                                                                                                                                                    │
+│                                                                                                                                                    │
+│                                                                                                                                                    │
+│                                                                                                                                                    │
+│                                                                                                                                                    │
+│                                                                                                                                                    │
+│            Awards and fellowships                                                                                                                  │
+│                                                                                                                                                    │
+│        Date            Title                                                           Institution                                                 │
+│   ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────   │
+│        2020            Wellcome Trust 4-Year PhD Fellowship.                           Sainsbury Wellcome Centre, University College London        │
+│        2015            Erasmus scholarship for the bachelor project in Leuven,         Università degli Studi, Milano, Italy                       │
+│                        Belgium.                                                                                                                    │
+│                                                                                                                                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+   14:35:34
+╭────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                    │
+│   Publications                                                                                                                                     │
+│   ────────────                                                                                                                                     │
+│                                                                                                                                                    │
+│   ╭────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮   │
+│   │                                                                                                                                            │   │
+│   │   Federico Claudi                                                                                                                          │   │
+│   │   PhD Student, University College London                                                                                                   │   │
+│   │   Interests: Neuroscience behaviour                                                                                                        │   │
+│   │                                                                                                                      Total citations: 19   │   │
+│   │                                                                                                                               H-index: 1   │   │
+│   │                                                                                                                                            │   │
+│   ╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯   │
+│                                                                                                                                                    │
+│                                                                                                                                                    │
+│                                                                        2020                                                                        │
+│                                                                                                                                                    │
+│   Brainrender. A python based software for visualisation of neuroanatomical and morphological data.                                                │
+│   Federico Claudi, Adam L Tyson, Tiago Branco,                                                                                                     │
+│   BioRxiv                                                                                                                                          │
+│   https://www.biorxiv.org/content/biorxiv/early/2020/02/25/2020.02.23.961748.full.pdf                                                              │
+│                                                                                                                                     Citations: 1   │
+│                                                                                                                                                    │
+│   BrainGlobe Atlas API: a common interface for neuroanatomical atlases                                                                             │
+│   Federico Claudi, Luigi Petrucco, Adam L Tyson, Tiago Branco, Troy W Margrie, Ruben Portugues,                                                    │
+│   Journal of Open Source Software                                                                                                                  │
+│   https://joss.theoj.org/papers/10.21105/joss.02668.pdf                                                                                            │
+│                                                                                                                                     Citations: 0   │
+│                                                                                                                                                    │
+│   ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────   │
+│                                                                                                                                                    │
+│                                                                        2019                                                                        │
+│                                                                                                                                                    │
+│   Cerebellar-recipient motor thalamus drives behavioral context-specific movement initiation                                                       │
+│   Joshua Dacre, Matt Colligan, Julian Ammer, Julia Schiemann, Thomas Clarke, Victor Chamosa-Pino, Federico Claudi, J Alex Harston, Constantinos    │
+│   Eleftheriou, Janelle Pakan, Cheng-Chiu Huang, Adam Hantman, Nathalie Rochefort, Ian Duguid,                                                      │
+│   NEURON-D-19-01541                                                                                                                                │
+│   https://www.biorxiv.org/content/biorxiv/early/2019/10/16/802124.full.pdf                                                                         │
+│                                                                                                                                     Citations: 0   │
+│                                                                                                                                                    │
+│   ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────   │
+│                                                                                                                                                    │
+│                                                                        2016                                                                        │
+│                                                                                                                                                    │
+│   CXCL4 and CXCL4L1 differentially affect monocyte survival and dendritic cell differentiation and phagocytosis                                    │
+│   Mieke Gouwy, Pieter Ruytinx, Egle Radice, Federico Claudi, Katrien Van Raemdonck, Raffaella Bonecchi, Massimo Locati, Sofie Struyf,              │
+│   PloS one                                                                                                                                         │
+│   https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0166006                                                                        │
+│                                                                                                                                    Citations: 18   │
+│                                                                                                                                                    │
+│   CXCL4L1 induces a unique transcriptional profile in CD14 (+) peripheral blood monocytes                                                          │
+│   P Ruytinx, E Radice, F Claudi, K Van Raemdonck, M Locati, S Struyf, M Gouwy,                                                                     │
+│   European Journal Of Clinical Investigation                                                                                                       │
+│   https://lirias.kuleuven.be/187157?limo=0                                                                                                         │
+│                                                                                                                                     Citations: 0   │
+│                                                                                                                                                    │
+│                                                                                                                                                    │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+   14:35:34
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                                                                                                 │
+│   Open source projects                                                                                                                                                                                                          │
+│   ────────────────────                                                                                                                                                                                                          │
+│                                                                                                                                                                                                                                 │
+│   brainglobe                                                                                                                                                                                                                    │
+│   The brainglobe atlas API (BG-AtlasAPI) provides a common interface for programmers to download and process brain atlas data from multiple sources.                                                                            │
+│                                                                                                                                                                                                                                 │
+│                                                                                                                                                                         Github url: https://github.com/brainglobe/bg-atlasapi   │
+│                                                                                                                                                                 Documentation: https://docs.brainglobe.info/bg-atlasapi/usage   │
+│                                                                                                                                                                                                                     Stars: 30   │
+│                                                                                                                                                                                                                                 │
+│                                                                                                                                                                                                                                 │
+│   brainrender                                                                                                                                                                                                                   │
+│   brainrender is a python package for the visualization of three dimensional neuro-anatomical data. The goal of brainrender is to facilitate the exploration and dissemination of neuro-anatomical data.                        │
+│                                                                                                                                                                                                                                 │
+│                                                                                                                                                                          Github url: https://github.com/BrancoLab/BrainRender   │
+│                                                                                                                                                                                 Documentation: https://docs.brainrender.info/   │
+│                                                                                                                                                                                                                    Stars: 113   │
+│                                                                                                                                                                                                                                 │
+│                                                                                                                                                                                                                                 │
+│   pyinspect                                                                                                                                                                                                                     │
+│   description                                                                                                                                                                                                                   │
+│                                                                                                                                                                                                                                 │
+│                                                                                                                                                                           Github url: https://github.com/FedeClaudi/pyinspect   │
+│                                                                                                                                                                                                                     Stars: 27   │
+│                                                                                                                                                                                                                                 │
+│                                                                                                                                                                                                                                 │
+│                                                                                                                                                                                                                                 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
