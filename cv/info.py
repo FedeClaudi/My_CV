@@ -1,79 +1,80 @@
+from pyinspect._colors import *
+
+highlight = f'bold italic {lightgreen2}'
+
 education = {
     (2017, 'now '): [
-                        'PhD in [green]"Experimental and theoretical systems neuroscience"[/green]',
-                        'Sainsbury Wellcome Centre', 
-                        'University College London',
-                        'Dr. Tiago Branco'
+                        f'PhD in [{highlight}]"Experimental and theoretical systems neuroscience"[/{highlight}]',
+                        'Dr. Tiago Branco',
+                        'Sainsbury Wellcome Centre [dim]UCL', 
                         ],
 
     (2015, 2016): [
-                        'Master in Research in [green]"Integrative Neuroscience"[/green]',
+                        f'Master in Research in [{highlight}]"Integrative Neuroscience"[/{highlight}]',
+                        'Dr. Ian Duguid',
                         'University of Edinburgh', 
-                        'Edinburgh',
-                        'Dr. Ian Duguid'
                         ],
 
     (2012, 2015): [
-                        'Bachelor in [green]"Medical Biotechnologies"[/green]',
+                        f'Bachelor in [{highlight}]"Medical Biotechnologies"[/{highlight}]',
+                        'Dr. Ian Duguid',
                         'University of Edinburgh', 
-                        'Edinburgh',
-                        'Dr. Ian Duguid'
                         ],
 }
 
 research_experience = {
     (2017, 'now '): [
-        'PhD research project (4 years)',
-        'Sainsbury Wellcome Centre, UK',
+        'PhD research project [dim](4 years)',
+        'Sainsbury Wellcome Centre,[dim] UK',
         'Dr. Tiago Branco.'
         ],
  
     (2016, 2017): [
-        'Visiting scientist (1 year)', 
-        'University of Edinburgh, UK',
+        'Visiting scientist [dim](1 year)', 
+        'University of Edinburgh,[dim] UK',
         'Dr. Ian Duguid.'
         ],
  
     (2015, 2016): [
-        'Master project (1 year)', 
-        'University of Edinburgh, UK',
+        'Master project [dim](1 year)', 
+        'University of Edinburgh,[dim] UK',
         'Dr. Ian Duguid.'
         ],
  
     (2015, 2015): [
-        'Bachelor dissertation project (4 months)', 
-        'Katholiege Universitei, Leuven, Belgium',
+        'Bachelor dissertation project [dim](4 months)', 
+        'Katholiege Universitei,[dim] Leuven, Belgium',
         '',
         ],
  
     (2011, 2011): [
-        'Summer internship (1 month)', 
-        'Columbia university, New York City, USA',
+        'Summer internship [dim](1 month)', 
+        'Columbia university,[dim] New York City, USA',
         'Dr. Filippo Mancia'
         ],
  
     (2011, 2011): [
-        'Summer internship (1 month)',
-        'Università degli Studi, Milano, Italy',
+        'Summer internship [dim](1 month)',
+        'Università degli Studi,[dim] Milano, Italy',
         ''
         ],
     
     (2010, 2010): [
-        'Summer internship (1 month)', 
-        'Columbia university, New York City, USA',
+        'Summer internship [dim](1 month)', 
+        'Columbia university,[dim] New York City, USA',
         'Dr. Filippo Mancia'
         ],
 }
 
 extracurr_education = {
     ('2015a'): [
-        'Online Course in "Medical Neuroscience"',
+        f'Online Course in [{highlight}]"Medical Neuroscience"',
         'Duke University, USA',
         'Attended on: coursera.org'
         ],
 
     ('2015b'): [
-        'Online Course in Synapses, Neurons and Brain"',
+        f'Online Course in [{highlight}]"Synapses, Neurons and Brain"',
         'Hebrew University, Jerusalem, Israel',
         'Attended on: coursera.org'
         ],
@@ -81,41 +82,47 @@ extracurr_education = {
 
 teaching_experience = {
     (2020): [
-        'Teaching Assistant at NeuroMatchAcademy.',
-        'NeuroMatchAcademy'
+        f'Teaching Assistant at [{highlight}]NeuroMatchAcademy.',
+        'Neuromatch Academy'
         ],
 
     (2019): [
-            '[link=https://www.xhmfoundation.com/braincamp-kosovo-2019]Teacher at Braincamp',
-            'ATOMI institute, Pristina',
+            f'[link=https://www.xhmfoundation.com/braincamp-kosovo-2019]Teacher at [{highlight}]Braincamp',
+            'ATOMI institute,[dim] Pristina',
         ],
 
     (2016): [
         'Training of colleagues in microsurgical and behavioural techniques',
-        'University of Edinburgh, Edinburgh'
+        'University of Edinburgh,[dim] Edinburgh'
         ],
 }
 
 publications = {
-    (2020): [
-            'Brainrender. A python based software for visualisation of neuroanatomical and morphological data',
+    (1, 2020): [
+            'BrainGlobe Atlas API: a common interface for neuroanatomical atlases.',
+            '[bold green]Federico Claudi[/bold green], Luigi Petrucco, Adam L. Tyson, TiagoBranco, Troy W. Margrie, and Ruben Portugues',
+            'Journal of Open Source Software',
+            '[link=https://doi.org/10.21105/joss.02668]doi.org/10.21105/joss.02668',
+    ],
+    (2, 2020): [
+            'Brainrender. A python based software for visualisation of neuroanatomical and morphological data\n',
             '[bold green]Federico Claudi[/bold green], Adam L. Tyson, Tiago Branco',
             '[italic]bioRxiv (2020)',
             '[link=https://doi.org/10.1101/2020.02.23.96174]doi.org/10.1101/2020.02.23.96174',  
             ],
 
  
-    (2019): [
+    (3, 2019): [
             'Cerebellar-recipient motor thalamus drives behavioral context-specific movement initiation',
             'Joshua Dacre, Matt Colligan, Julian Ammer, Julia Schiemann, Thomas Clarke, Victor Chamosa-' + \
             'Pino, [bold green]Federico Claudi[/bold green], J. Alex Harston, Constantinos Eleftheriou, Janelle M.P. Pakan, Cheng-Chiu' + \
             'Huang, Adam Hantman, Nathalie L. Rochefort, Ian Duguid',
             '[italic]bioRxiv (2019)',
-            '[link=https://doi.org/10.1101/80212]oi.org/10.1101/802124',  
+            '[link=https://doi.org/10.1101/80212]doi.org/10.1101/802124',  
             ],
         
         
-    (2016): [
+    (4, 2016): [
             'CXCL4 and CXCL4L1 Differentially Affect Monocyte Survival and Dendritic Cell Differentiation and Phagocytosis.',
             'Gouwy M, Ruytinx P, Radice E, [bold green]Claudi F[/bold green], Van Raemdonck K, Bonecchi R',
             '[italic]PLoS ONE (2016)',
@@ -136,23 +143,14 @@ posters = {
 awards = {
     (2020): [
         'Wellcome Trust 4-Year PhD Fellowship.',
-        'Sainsbury Wellcome Centre, University College London}, London'
+        'Sainsbury Wellcome Centre,[dim] University College London'
         ],
 
     (2015): [
         'Erasmus scholarship for the bachelor project in Leuven, Belgium. ',
-        'Università degli Studi, Milano, Italy'
+        'Università degli Studi,[dim] Milano, Italy'
         ],
 }
 
 
 
-
-
-# ! TODO fix links!
-# TODO styling
-
-
-# TODO header
-# TODO open_source_projects
-# TODO fellowship and awards

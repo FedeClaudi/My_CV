@@ -1,29 +1,32 @@
 from cv.render_utils import render_panel, make_table
 from rich.markdown import Markdown
 
+from pyinspect._colors import *
+
+header = f'bold {orange}'
+highlight = f'[{lightorange}]'
+
+
 @render_panel
 def render_education(info):
     # Make table
     columns = [
-        ('center', 13, None, 1, '[bold magenta]Date[/bold magenta]'),
-        (None, None, 'italic', 1, '[bold magenta]Title[/bold magenta]'),
-        (None, None, 'bold', 1, '[bold magenta]Insitute[/bold magenta]'),
-        ('center', None, 'bold', 1, None),
-        (None, None, None, False, '[bold magenta]Supervisor[/bold magenta]'),
+        ('center', 13, None, 1, f'[bold]Date'),
+        (None, None, None, 1, f'[{header}]Title[/{header}]'),
+        (None, None, None, 1, f'[{header}]Supervisor[/{header}]'),
+        (None, None, 'bold', False, f'[{header}]Insitute[/{header}]'),
     ]
     table = make_table(columns)
 
 
     # Populate table
-    for key, (title, center, institution, supervisor) in info.items():
+    for key, (title, center, supervisor) in info.items():
         table.add_row(
-            f'({key[0]} - {key[1]})',
+            f'[dim]({key[0]} - {key[1]})',
             '',
-            title,
+            highlight + title,
             "",
             center,
-            '',
-            institution,
             '',
             supervisor
         )
@@ -33,10 +36,9 @@ def render_education(info):
 def render_extracurr_education(info):
     # Make table
     columns = [
-        ('center', 13, None, 1, '[bold magenta]Date[/bold magenta]'),
-        (None, None, 'italic', 1, '[bold magenta]Title[/bold magenta]'),
-        (None, None, 'bold', 1, '[bold magenta]Insitute[/bold magenta]'),
-        ('center', None, 'bold', False, None),
+        ('center', 13, None, 1, f'[bold]Date'),
+        (None, None, None, 1, f'[{header}]Title[/{header}]'),
+        (None, None, 'bold', 1, f'[{header}]Insitute[/{header}]'),
 
     ]
     table = make_table(columns)
@@ -44,13 +46,11 @@ def render_extracurr_education(info):
     # Populate table
     for key, (title, institution, other) in info.items():
         table.add_row(
-            str(key),
+            '[dim]'+str(key),
             '',
-            title,
+            highlight + title,
             '',
-            institution,
-            '',
-            other
+            institution + '[dim]  ' +other,
         )
     return table, 'green', 'Extracurricular education'
 
@@ -59,10 +59,10 @@ def render_extracurr_education(info):
 def render_experience(experience):
     # Make table
     columns = [
-        ('center', 13, None, 1, '[bold magenta]Date[/bold magenta]'),
-        (None, None, 'italic', 1, '[bold magenta]Name[/bold magenta]'),
-        (None, None, 'bold', 1, '[bold magenta]Insitute[/bold magenta]'),
-        (None, None, 'bold', 1, '[bold magenta]Supervisor[/bold magenta]'),
+        ('center', 13, None, 1, f'[bold]Date'),
+        (None, None, 'italic', 1, f'[{header}]Name[/{header}]'),
+        (None, None, 'bold', 1, f'[{header}]Insitute[/{header}]'),
+        (None, None, 'bold', 1, f'[{header}]Supervisor[/{header}]'),
 
     ]
     table = make_table(columns)
@@ -70,9 +70,9 @@ def render_experience(experience):
     # Populate table
     for key, (name, institution, supervisor) in experience.items():
         table.add_row(
-            f'({key[0]} - {key[1]})',
+            f'[dim]({key[0]} - {key[1]})',
             '',
-            name,
+            highlight + name,
             "",
             institution,
             '',
@@ -87,9 +87,9 @@ def render_experience(experience):
 def render_teaching(experience):
     # Make table
     columns = [
-        ('center', 13, None, 1, '[bold magenta]Date[/bold magenta]'),
-        (None, None, 'italic', 1, '[bold magenta]Name[/bold magenta]'),
-        (None, None, 'bold', 1, '[bold magenta]Insitute[/bold magenta]'),
+        ('center', 13, None, 1, f'[bold]Date'),
+        (None, None, 'italic', 1, f'[{header}]Name[/{header}]'),
+        (None, None, 'bold', 1, f'[{header}]Insitute[/{header}]'),
 
     ]
     table = make_table(columns)
@@ -97,9 +97,9 @@ def render_teaching(experience):
     # Populate table
     for key, (name, institution) in experience.items():
         table.add_row(
-            str(key),
+            '[dim]'+str(key),
             '',
-            name,
+            highlight + name,
             "",
             institution,
         )
@@ -113,33 +113,31 @@ def render_teaching(experience):
 def render_publications(pubs):
     # Make table
     columns = [
-        ('center', 13, None, 1, '[bold magenta]Date[/bold magenta]'),
-        (None, None, 'italic', 1, '[bold magenta]Title[/bold magenta]'),
-        (None, None, 'bold', 1, '[bold magenta]Authors[/bold magenta]'),
-        (None, None, 'bold', 1, '[bold magenta]Journal[/bold magenta]'),
-        (None, None, 'bold', 1, '[bold magenta]DOI[/bold magenta]'),
+        ('center', 13, None, 1, f'[bold]Date'),
+        (None, 50, 'italic', 1, f'[{header}]Title[/{header}]'),
+        (None, 20, None, 1, f'[{header}]Authors[/{header}]'),
+        (None, None, None, None, f'[{header}]Journal[/{header}]'),
 
     ]
     table = make_table(columns)
 
     # Populate table
-    for key, (title, authors, journal, doi) in pubs.items():
-        if len(authors) > 100:
-            authors = authors[:96] + ' ...'
+    for (_, key), (title, authors, journal, doi) in pubs.items():
+        if len(authors) > 40:
+            # authors = authors[:31 - 4] + ' ...\n'
+            authors = authors.split(',')[0] + ', ...\n'
 
-            if 'claudi' not in authors.lower():
-                authors += ' [bold green]F. Claudi[/bold green] ...'
+            # if 'claudi' not in authors.lower():
+            #     authors += ' [bold green]F. Claudi[/bold green] ...'
 
         table.add_row(
-            str(key),
+            '[dim]'+str(key),
             '',
-            title,
+            highlight + title + '\n',
             "",
             authors,
             '',
-            journal,
-            '',
-            doi
+            journal + '[dim]\n'+doi
         )
 
 
@@ -151,10 +149,10 @@ def render_publications(pubs):
 def render_posters(pubs):
     # Make table
     columns = [
-        ('center', 13, None, 1, '[bold magenta]Date[/bold magenta]'),
-        (None, None, 'italic', 1, '[bold magenta]Title[/bold magenta]'),
-        (None, None, 'bold', 1, '[bold magenta]Authors[/bold magenta]'),
-        (None, None, 'bold', 1, '[bold magenta]Conference[/bold magenta]'),
+        ('center', 13, None, 1, f'[bold]Date'),
+        (None, None, 'italic', 1, f'[{header}]Title[/{header}]'),
+        (None, None, 'bold', 1, f'[{header}]Authors[/{header}]'),
+        (None, None, 'bold', 1, f'[{header}]Conference[/{header}]'),
 
     ]
     table = make_table(columns)
@@ -168,9 +166,9 @@ def render_posters(pubs):
                 authors += ' [bold green]F. Claudi[/bold green] ...'
 
         table.add_row(
-            str(key),
+            '[dim]'+str(key),
             '',
-            title,
+            highlight + title,
             "",
             authors,
             '',
@@ -184,9 +182,9 @@ def render_posters(pubs):
 def render_awards(pubs):
     # Make table
     columns = [
-        ('center', 13, None, 1, '[bold magenta]Date[/bold magenta]'),
-        (None, None, 'italic', 1, '[bold magenta]Title[/bold magenta]'),
-        (None, None, 'bold', 1, '[bold magenta]Institution[/bold magenta]'),
+        ('center', 13, None, 1, f'[bold]Date'),
+        (None, None, 'italic', 1, f'[{header}]Title[/{header}]'),
+        (None, None, 'bold', 1, f'[{header}]Institution[/{header}]'),
 
     ]
     table = make_table(columns)
@@ -194,9 +192,9 @@ def render_awards(pubs):
     # Populate table
     for key, (title, institution) in pubs.items():
         table.add_row(
-            str(key),
+            '[dim]'+str(key),
             '',
-            title,
+            highlight + title,
             "",
             institution
         )
