@@ -8,6 +8,7 @@ from github import Github
 
 from .info import *
 from .render import *
+from .secrets import gh_pswd
 
 WIDTH = 150
 
@@ -31,7 +32,7 @@ def make_projs():
         return git.get_repo(item[1]).stargazers_count
 
     # Use github API
-    git = Github()
+    git = Github("FedeClaudi", gh_pswd)
 
     projs = pi.Report('Open source projects', color=green, accent=green, dim=dimgreen)
     projs.tb.expand = True
@@ -43,7 +44,7 @@ def make_projs():
     for name in sorted_projs:
         descr, github, url = open_source_projs[name]
 
-        projs.add(f'green underline' + name)
+        projs.add(f'[{green}]' + name)
         projs.add(descr)
 
         projs.spacer()

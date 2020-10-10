@@ -22,9 +22,11 @@ def show():
     try:
         projs = make_projs()
     except Exception:  # too many API requests
+        print('Could not get projs dammit')
         projs = ''
 
-    pi.console.print(bio,  projs)
+
+    pi.console.print( '\n', bio, '\n', CV, pubs, projs)
 
 
 
