@@ -2,7 +2,7 @@ import pyinspect as pi
 pi.install_traceback()
 
 
-from .make import make_cv, make_pubs, make_projs
+from .make import make_cv, make_pubs, make_projs, make_bio
 
 
 # TODO BIO
@@ -13,14 +13,18 @@ from .make import make_cv, make_pubs, make_projs
 
 
 def show():
-    # CV = make_cv()
+    bio = make_bio()
 
-    # pubs = make_pubs()
+    CV = make_cv()
+
+    pubs = make_pubs()
     
-    # projs = make_projs()
+    try:
+        projs = make_projs()
+    except Exception:  # too many API requests
+        projs = ''
 
-    pi.console.print(projs)
+    pi.console.print(bio,  projs)
 
-show()
 
 

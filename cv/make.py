@@ -2,6 +2,7 @@ from pyinspect._colors import *
 import pyinspect as pi
 import numpy as np
 from rich.panel import Panel
+from rich.table import Table
 from scholarly import scholarly
 from github import Github
 
@@ -10,6 +11,20 @@ from .render import *
 
 WIDTH = 150
 
+
+def make_bio():
+    
+    tb = Table(box=None, show_lines=None, show_edge=None, width=WIDTH)
+    tb.add_column(justify='right')
+    tb.add_column(justify='left')
+
+    for n, (prop, val) in enumerate(BIO.items()):
+        tb.add_row(f'[{orange if n <=1 else lightorange}]{prop}:', f'[bold]{val}')
+
+        if n == 1:
+            tb.add_row('', '')
+    
+    return tb
 
 def make_projs():
     def sort_items(item):

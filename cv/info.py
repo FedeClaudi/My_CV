@@ -3,6 +3,15 @@ from pyinspect._colors import *
 highlight = f'bold italic {lightgreen2}'
 
 
+BIO = {
+    'name': 'Federico Claudi',
+    'email': 'federico.claudi.17@ucl.ac.uk',
+    
+    'website': 'https://fedeclaudi.github.io',
+    'github': 'https://github.com/FedeClaudi',
+    'twitter': 'https://twitter.com/Federico_claudi'
+}
+
 open_source_projs = {
     'brainglobe': [
                 'The brainglobe atlas API (BG-AtlasAPI) provides a common interface for programmers to download and process brain atlas data from multiple sources.',
