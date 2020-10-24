@@ -26,7 +26,7 @@ open_source_projs = {
     ],
 
     'pyinspect': [
-                'description',
+                'pyinspect, the python package for lazy programmers. Inspect your code, improve tracebacks and automatic googling for bug fixes.',
                 'FedeClaudi/pyinspect',
                 None,
     ],

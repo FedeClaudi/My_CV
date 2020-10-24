@@ -58,12 +58,7 @@ def make_projs():
         projs.add(f'[{lightgray}]Stars: [{orange}]{repo.stargazers_count}', justify='right')
         projs.spacer(2)
 
-    return Panel(
-            projs.tb,
-            expand=True,
-            border_style=projs.dim,
-            padding=(0, 2, 1, 2),
-    )
+    return projs
 
 
 def make_gscholar_bio(me):
@@ -102,7 +97,7 @@ def make_pubs():
     pubs = pi.Report('Publications', accent=orange, dim=mocassin)
     pubs.width = WIDTH
 
-    pubs.add(make_gscholar_bio(me), 'obj')
+    pubs.add(make_gscholar_bio(me), 'rich')
     pubs.spacer(2)
 
     year = None
@@ -169,37 +164,37 @@ def make_cv():
     # ? education
     CV.add(f'[{hs}]         [underline]Education:')
     CV.spacer()
-    CV.add(render_education(education), 'obj')
+    CV.add(render_education(education), 'rich')
     
     # ? extracurr education
     CV.spacer(2)
     CV.add(f'[{hs}]         [underline]Extracurricular education')
     CV.spacer()
-    CV.add(render_extracurr_education(extracurr_education), 'obj')
+    CV.add(render_extracurr_education(extracurr_education), 'rich')
     
 
     # ? research experience
-    CV.spacer(6)
+    CV.spacer(4)
     CV.add(f'[{hs}]         [underline]Research experience')
     CV.spacer()
-    CV.add(render_experience(research_experience), 'obj')
+    CV.add(render_experience(research_experience), 'rich')
     
     # ? teaching experience
     CV.spacer(2)
     CV.add(f'[{hs}]         [underline]Teaching experience')
     CV.spacer()
-    CV.add(render_teaching(teaching_experience), 'obj')
+    CV.add(render_teaching(teaching_experience), 'rich')
     
     # ?  posters
     CV.spacer(2)
     CV.add(f'[{hs}]         [underline]Poster presentations')
     CV.spacer()
-    CV.add(render_posters(posters), 'obj')
+    CV.add(render_posters(posters), 'rich')
     
     # ?  awards
-    CV.spacer(6)
+    CV.spacer(4)
     CV.add(f'[{hs}]         [underline]Awards and fellowships')
     CV.spacer()
-    CV.add(render_awards(awards), 'obj')
+    CV.add(render_awards(awards), 'rich')
 
     return CV
