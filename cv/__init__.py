@@ -25,6 +25,13 @@ def show():
     txtconsole = Console(file=open('cv.txt', 'w'))
     txtconsole.print('\n', bio, '\n', CV,  pubs, projs)
 
+    # To write to html
+    htmlconsole = Console(record=True)
+    htmlconsole.print('\n', bio, '\n', CV,  pubs, projs)
+    htmlconsole.save_html('cv.html')
+
+    # TODO find way to make color white and background #232323
+
     # To print to terminal
     pi.console.print('\n', bio, '\n', CV,  pubs, projs)
 
