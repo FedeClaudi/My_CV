@@ -1,13 +1,14 @@
-from pyinspect._colors import *
-import pyinspect as pi
 import numpy as np
 from rich.panel import Panel
 from rich.table import Table
 from scholarly import scholarly
 from github import Github
 
-from .info import *
-from .render import *
+import pyinspect as pi
+from myterial import orange, orange_light, green, green_dark, amber, salmon_light, blue_grey, blue_grey_light
+
+from .info import BIO, open_source_projs, education, research_experience, extracurr_education, teaching_experience, publications, posters, awards
+from .render import render_education, render_extracurr_education, render_experience, render_teaching, render_publications, render_posters, render_awards, render_header
 from .secrets import gh_pswd
 
 WIDTH = 150
@@ -20,7 +21,7 @@ def make_bio():
     tb.add_column(justify='left')
 
     for n, (prop, val) in enumerate(BIO.items()):
-        tb.add_row(f'[{orange if n <=1 else lightorange}]{prop}:', f'[bold]{val}')
+        tb.add_row(f'[{orange if n <=1 else orange_light}]{prop}:', f'[bold]{val}')
 
         if n == 1:
             tb.add_row('', '')
@@ -34,7 +35,7 @@ def make_projs():
     # Use github API
     git = Github("FedeClaudi", gh_pswd)
 
-    projs = pi.Report('Open source projects', color=green, accent=green, dim=dimgreen)
+    projs = pi.Report('Open source projects', color=green, accent=green, dim=green_Dark)
     projs.width = WIDTH
     projs.tb.expand = True
 
@@ -49,13 +50,13 @@ def make_projs():
         projs.add(descr)
 
         projs.spacer()
-        projs.add(f'[{gray}]Github url:[/{gray}] [dim]https://github.com/{github}', justify='right')
+        projs.add(f'[{blue_grey}]Github url:[/{blue_grey}] [dim]https://github.com/{github}', justify='right')
 
         if url is not None:
-            projs.add(f'[{gray}]Documentation:[/{gray}] [dim]{url}', justify='right')
+            projs.add(f'[{blue_grey}]Documentation:[/{blue_grey}] [dim]{url}', justify='right')
 
         repo = git.get_repo(github)
-        projs.add(f'[{lightgray}]Stars: [{orange}]{repo.stargazers_count}', justify='right')
+        projs.add(f'[{blue_grey_light}]Stars: [{orange}]{repo.stargazers_count}', justify='right')
         projs.spacer(2)
 
     return projs
@@ -66,15 +67,15 @@ def make_gscholar_bio(me):
     bio.width = WIDTH
     bio.tb.expand = True
 
-    bio.add(f'[bold {lightorange}]{me.name}')
+    bio.add(f'[bold {orange_light}]{me.name}')
 
     # Interests
     bio.add(f'[{gray}]{me.affiliation}')
     bio.add(f'[dim i]Interests: ' + ''.join([i+' ' for i in me.interests]))
 
     # Numbers
-    bio.add(f'[{lightgray}]Total citations: [{orange}]{me.citedby}', justify='right')
-    bio.add(f'[{lightgray}]H-index: [{orange}]{me.hindex}', justify='right')
+    bio.add(f'[{blue_grey_light}]Total citations: [{orange}]{me.citedby}', justify='right')
+    bio.add(f'[{blue_grey_light}]H-index: [{orange}]{me.hindex}', justify='right')
 
     return Panel(
             bio.tb,
@@ -94,7 +95,7 @@ def make_pubs():
     myid = '8eDOmAQAAAAJ'  # google scholar ID
     me = scholarly.search_author_id(myid).fill()
 
-    pubs = pi.Report('Publications', accent=orange, dim=mocassin)
+    pubs = pi.Report('Publications', accent=orange, dim=amber)
     pubs.width = WIDTH
 
     pubs.add(make_gscholar_bio(me), 'rich')
@@ -110,16 +111,16 @@ def make_pubs():
         if pub['year'] != year:
 
             if n > 0:
-                pubs.line(mocassin)
+                pubs.line(amber)
                 pubs.spacer()
 
-            pubs.add(f'[bold {lightsalmon}]{pub["year"]}', justify='center')
+            pubs.add(f'[bold {salmon_light}]{pub["year"]}', justify='center')
             year = pub['year']
             pubs.spacer()
 
 
         # add title
-        pubs.add(f'[bold italic {lightorange}]' + pub['title']) 
+        pubs.add(f'[bold italic {orange_light}]' + pub['title']) 
 
         # add authors
         auths = pub['author'].replace(' and', ',')
@@ -130,7 +131,7 @@ def make_pubs():
             if author.strip() in names:
                 formatted_auths += f'[bold green]{author}[/bold green],'
             else:
-                formatted_auths += f'[{gray}]{author}[/{gray}],'
+                formatted_auths += f'[{blue_grey}]{author}[/{blue_grey}],'
 
         pubs.add(formatted_auths)
 
@@ -141,11 +142,11 @@ def make_pubs():
             url = pub['url']
         else:
             print(f'No URL found for pub {pub}')
-        pubs.add(f'[i {lightgray}]' + pub['journal'] + f'[/i {lightgray}]' + '[dim]\n' + url)
+        pubs.add(f'[i {blue_grey_light}]' + pub['journal'] + f'[/i {blue_grey_light}]' + '[dim]\n' + url)
 
 
         # Add citations
-        pubs.add(f'[{lightgray}]Citations: [{orange}]{pub["cites"]}', justify='right')
+        pubs.add(f'[{blue_grey_light}]Citations: [{orange}]{pub["cites"]}', justify='right')
 
         pubs.spacer()
 
@@ -158,7 +159,7 @@ def make_cv():
 
 
     CV = pi.Report('Curriculum Vitae', color=salmon, 
-        accent=lightsalmon, dim=salmon)
+        accent=salmon_light, dim=salmon)
     CV.width = WIDTH
     
     # ? education

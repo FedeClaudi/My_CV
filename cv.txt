@@ -83,24 +83,30 @@
 │   │   Federico Claudi                                                                                                                          │   │
 │   │   PhD Student, University College London                                                                                                   │   │
 │   │   Interests: Neuroscience behaviour                                                                                                        │   │
-│   │                                                                                                                      Total citations: 20   │   │
-│   │                                                                                                                               H-index: 1   │   │
+│   │                                                                                                                      Total citations: 24   │   │
+│   │                                                                                                                               H-index: 2   │   │
 │   │                                                                                                                                            │   │
 │   ╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯   │
 │                                                                                                                                                    │
 │                                                                                                                                                    │
 │                                                                        2020                                                                        │
 │                                                                                                                                                    │
-│   Brainrender. A python based software for visualisation of neuroanatomical and morphological data.                                                │
-│   Federico Claudi, Adam L Tyson, Tiago Branco,                                                                                                     │
-│   BioRxiv                                                                                                                                          │
-│   https://www.biorxiv.org/content/biorxiv/early/2020/02/25/2020.02.23.961748.full.pdf                                                              │
-│                                                                                                                                     Citations: 1   │
-│                                                                                                                                                    │
 │   BrainGlobe Atlas API: a common interface for neuroanatomical atlases                                                                             │
 │   Federico Claudi, Luigi Petrucco, Adam L Tyson, Tiago Branco, Troy W Margrie, Ruben Portugues,                                                    │
 │   Journal of Open Source Software                                                                                                                  │
 │   https://joss.theoj.org/papers/10.21105/joss.02668.pdf                                                                                            │
+│                                                                                                                                     Citations: 2   │
+│                                                                                                                                                    │
+│   Brainrender. A python based software for visualisation of neuroanatomical and morphological data.                                                │
+│   Federico Claudi, Adam L Tyson, Tiago Branco,                                                                                                     │
+│   BioRxiv                                                                                                                                          │
+│   https://www.biorxiv.org/content/biorxiv/early/2020/02/25/2020.02.23.961748.full.pdf                                                              │
+│                                                                                                                                     Citations: 2   │
+│                                                                                                                                                    │
+│   Brainrender: a python-based software for visualizing anatomically registered data                                                                │
+│   Federico Claudi, Adam L Tyson, Luigi Petrucco, Troy W Margrie, Ruben Portugues, Tiago Branco,                                                    │
+│   bioRxiv                                                                                                                                          │
+│   https://www.biorxiv.org/content/10.1101/2020.02.23.961748v2.full                                                                                 │
 │                                                                                                                                     Citations: 0   │
 │                                                                                                                                                    │
 │   ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────   │
@@ -112,7 +118,7 @@
 │   Eleftheriou, Janelle Pakan, Cheng-Chiu Huang, Adam Hantman, Nathalie Rochefort, Ian Duguid,                                                      │
 │   NEURON-D-19-01541                                                                                                                                │
 │   https://www.biorxiv.org/content/biorxiv/early/2019/10/16/802124.full.pdf                                                                         │
-│                                                                                                                                     Citations: 0   │
+│                                                                                                                                     Citations: 1   │
 │                                                                                                                                                    │
 │   ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────   │
 │                                                                                                                                                    │
@@ -143,7 +149,7 @@
 │                                                                                                                                                    │
 │                                                                                            Github url: https://github.com/brainglobe/bg-atlasapi   │
 │                                                                                    Documentation: https://docs.brainglobe.info/bg-atlasapi/usage   │
-│                                                                                                                                        Stars: 30   │
+│                                                                                                                                        Stars: 33   │
 │                                                                                                                                                    │
 │                                                                                                                                                    │
 │   brainrender                                                                                                                                      │
@@ -152,14 +158,14 @@
 │                                                                                                                                                    │
 │                                                                                             Github url: https://github.com/BrancoLab/BrainRender   │
 │                                                                                                    Documentation: https://docs.brainrender.info/   │
-│                                                                                                                                       Stars: 118   │
+│                                                                                                                                       Stars: 154   │
 │                                                                                                                                                    │
 │                                                                                                                                                    │
 │   pyinspect                                                                                                                                        │
 │   pyinspect, the python package for lazy programmers. Inspect your code, improve tracebacks and automatic googling for bug fixes.                  │
 │                                                                                                                                                    │
 │                                                                                              Github url: https://github.com/FedeClaudi/pyinspect   │
-│                                                                                                                                        Stars: 45   │
+│                                                                                                                                        Stars: 64   │
 │                                                                                                                                                    │
 │                                                                                                                                                    │
 │                                                                                                                                                    │

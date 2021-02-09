@@ -1,6 +1,6 @@
-from pyinspect._colors import *
+from myterial import green_light
 
-highlight = f'bold italic {lightgreen2}'
+highlight = f'bold italic {green_light}'
 
 
 BIO = {

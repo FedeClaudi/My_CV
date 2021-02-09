@@ -1,10 +1,10 @@
 from cv.render_utils import render_panel, make_table
 from rich.markdown import Markdown
 
-from pyinspect._colors import *
+from myterial import orange, orange_light
 
 header = f'bold {orange}'
-highlight = f'[{lightorange}]'
+highlight = f'[{orange_light}]'
 
 
 @render_panel
