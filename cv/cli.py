@@ -2,8 +2,11 @@
 import typer
 from cv.cv import CV
 
+app = typer.Typer()
 
-def main(html: str = typer.Option("", help="Path to a HTML fil"),):
+
+@app.command()
+def main(html: str = "",):
     """
         Show my CV
     """
@@ -15,4 +18,4 @@ def main(html: str = typer.Option("", help="Path to a HTML fil"),):
 
 
 if __name__ == "__main__":
-    typer.run(main)
+    app()
