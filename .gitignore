@@ -1,7 +1,8 @@
-
+cv/secrets.py
 
 .vscode/
 .vscode
+test.html
 workspace.py
 
 # Byte-compiled / optimized / DLL files

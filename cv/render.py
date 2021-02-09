@@ -1,207 +1,343 @@
-from cv.render_utils import render_panel, make_table
 from rich.markdown import Markdown
+from rich.table import Table
+from rich import box
 
 from myterial import orange, orange_light
 
-header = f'bold {orange}'
-highlight = f'[{orange_light}]'
+
+header = f"bold {orange}"
+highlight = f"[{orange_light}]"
 
 
-@render_panel
-def render_education(info):
+def make_table(columns, WIDTH):
+    """
+        Creates a table and  columns.
+
+        Arguments:
+            columns: list of render.COLUMN objects
+            WIDTH: int
+
+        Returns:
+            Table object
+    """
+    # add table
+    table = Table(
+        box=box.SIMPLE_HEAD,
+        padding=(0, 1),
+        collapse_padding=False,
+        show_header=True,
+        show_footer=False,
+        show_edge=False,
+        pad_edge=None,
+        expand=True,
+        width=WIDTH - 20,
+    )
+
+    # add columns
+    for column in columns:
+        table.add_column(
+            justify=column.justify,
+            width=column.width,
+            style=column.style,
+            header=column.title,
+        )
+
+        if column.spacer:
+            table.add_column(width=1)
+
+    return table
+
+
+class COLUMN:
+    def __init__(
+        self, justify=None, width=10, style="", spacer=False, title=""
+    ):
+        """Class for storing table columns parameters."""
+        self.justify = justify
+        self.width = width
+        self.style = style
+        self.spacer = spacer
+        self.title = title
+
+
+def education(info, WIDTH):
+    """
+        Make a table showing my education records
+
+        Argument:
+            info: dict of education info
+    """
     # Make table
     columns = [
-        ('center', 13, None, 1, f'[bold]Date'),
-        (None, None, None, 1, f'[{header}]Title[/{header}]'),
-        (None, None, None, 1, f'[{header}]Supervisor[/{header}]'),
-        (None, None, 'bold', False, f'[{header}]Insitute[/{header}]'),
+        COLUMN(justify="center", width=10, spacer=True, title=f"[bold]Date"),
+        COLUMN(spacer=True, width=30, title=f"[{header}]Title"),
+        COLUMN(spacer=True, title=f"[{header}]Supervisor"),
+        COLUMN(justify="bold", width=20, title=f"[{header}]Insitute"),
     ]
-    table = make_table(columns)
-
+    table = make_table(columns, WIDTH=WIDTH)
 
     # Populate table
     for key, (title, center, supervisor) in info.items():
         table.add_row(
-            f'[dim]({key[0]} - {key[1]})',
-            '',
+            f"[dim]({key[0]} - {key[1]})",
+            "",
             highlight + title,
             "",
             center,
-            '',
-            supervisor
+            "",
+            supervisor,
         )
-    return table, 'green', 'Education'
+    return table
 
-@render_panel
-def render_extracurr_education(info):
+
+def extracurr_education(info, WIDTH):
+    """
+        Make a table showing extra curricular education
+
+        Argument:
+            info: dict of extra curricular education
+    """
     # Make table
     columns = [
-        ('center', 13, None, 1, f'[bold]Date'),
-        (None, None, None, 1, f'[{header}]Title[/{header}]'),
-        (None, None, 'bold', 1, f'[{header}]Insitute[/{header}]'),
-
+        COLUMN(justify="center", width=10, spacer=True, title=f"[bold]Date"),
+        COLUMN(spacer=True, width=30, title=f"[{header}]Title[/{header}]"),
+        COLUMN(
+            justify="bold",
+            spacer=True,
+            width=30,
+            title=f"[{header}]Insitute[/{header}]",
+        ),
     ]
-    table = make_table(columns)
+    table = make_table(columns, WIDTH=WIDTH)
 
     # Populate table
     for key, (title, institution, other) in info.items():
         table.add_row(
-            '[dim]'+str(key),
-            '',
+            "[dim]" + str(key),
+            "",
             highlight + title,
-            '',
-            institution + '[dim]  ' +other,
+            "",
+            institution + "[dim]  " + other,
         )
-    return table, 'green', 'Extracurricular education'
+    return table
 
 
-@render_panel
-def render_experience(experience):
+def experience(experience, WIDTH):
+    """
+        Make a table showing research experince
+
+        Argument:
+            info: dict of research experince
+    """
     # Make table
     columns = [
-        ('center', 13, None, 1, f'[bold]Date'),
-        (None, None, 'italic', 1, f'[{header}]Name[/{header}]'),
-        (None, None, 'bold', 1, f'[{header}]Insitute[/{header}]'),
-        (None, None, 'bold', 1, f'[{header}]Supervisor[/{header}]'),
-
+        COLUMN(justify="center", width=10, spacer=True, title=f"[bold]Date"),
+        COLUMN(
+            justify="italic",
+            width=30,
+            spacer=True,
+            title=f"[{header}]Name[/{header}]",
+        ),
+        COLUMN(
+            justify="bold",
+            width=30,
+            spacer=True,
+            title=f"[{header}]Insitute[/{header}]",
+        ),
+        COLUMN(
+            justify="bold",
+            spacer=True,
+            title=f"[{header}]Supervisor[/{header}]",
+            width=20,
+        ),
     ]
-    table = make_table(columns)
+    table = make_table(columns, WIDTH=WIDTH)
 
     # Populate table
     for key, (name, institution, supervisor) in experience.items():
         table.add_row(
-            f'[dim]({key[0]} - {key[1]})',
-            '',
+            f"[dim]({key[0]} - {key[1]})",
+            "",
             highlight + name,
             "",
             institution,
-            '',
+            "",
             supervisor,
         )
 
-
     # Render
-    return table, 'blue', 'Research'
+    return table
 
-@render_panel
-def render_teaching(experience):
+
+def teaching(experience, WIDTH):
+    """
+        Make a table showing teaching experience
+
+        Argument:
+            info: dict of teaching experience
+    """
     # Make table
     columns = [
-        ('center', 13, None, 1, f'[bold]Date'),
-        (None, None, 'italic', 1, f'[{header}]Name[/{header}]'),
-        (None, None, 'bold', 1, f'[{header}]Insitute[/{header}]'),
-
+        COLUMN(justify="center", width=10, spacer=True, title=f"[bold]Date"),
+        COLUMN(
+            justify="italic",
+            spacer=True,
+            width=30,
+            title=f"[{header}]Name[/{header}]",
+        ),
+        COLUMN(
+            justify="bold",
+            spacer=True,
+            width=30,
+            title=f"[{header}]Insitute[/{header}]",
+        ),
     ]
-    table = make_table(columns)
+    table = make_table(columns, WIDTH=WIDTH)
 
     # Populate table
     for key, (name, institution) in experience.items():
         table.add_row(
-            '[dim]'+str(key),
-            '',
-            highlight + name,
-            "",
-            institution,
+            "[dim]" + str(key), "", highlight + name, "", institution,
         )
 
-
     # Render
-    return table, 'blue', 'Teaching'
+    return table
 
 
-@render_panel
-def render_publications(pubs):
+def publications(pubs, WIDTH):
+    """
+        Make a table showing publications
+
+        Argument:
+            info: dict of publications
+    """
     # Make table
     columns = [
-        ('center', 13, None, 1, f'[bold]Date'),
-        (None, 50, 'italic', 1, f'[{header}]Title[/{header}]'),
-        (None, 20, None, 1, f'[{header}]Authors[/{header}]'),
-        (None, None, None, None, f'[{header}]Journal[/{header}]'),
-
+        COLUMN(justify="center", width=10, spacer=True, title=f"[bold]Date"),
+        COLUMN(
+            width=50,
+            justify="italic",
+            spacer=True,
+            title=f"[{header}]Title[/{header}]",
+        ),
+        COLUMN(width=20, spacer=True, title=f"[{header}]Authors[/{header}]"),
+        COLUMN(title=f"[{header}]Journal[/{header}]"),
     ]
-    table = make_table(columns)
+    table = make_table(columns, WIDTH=WIDTH)
 
     # Populate table
     for (_, key), (title, authors, journal, doi) in pubs.items():
         if len(authors) > 40:
             # authors = authors[:31 - 4] + ' ...\n'
-            authors = authors.split(',')[0] + ', ...\n'
+            authors = authors.split(",")[0] + ", ...\n"
 
             # if 'claudi' not in authors.lower():
             #     authors += ' [bold green]F. Claudi[/bold green] ...'
 
         table.add_row(
-            '[dim]'+str(key),
-            '',
-            highlight + title + '\n',
+            "[dim]" + str(key),
+            "",
+            highlight + title + "\n",
             "",
             authors,
-            '',
-            journal + '[dim]\n'+doi
+            "",
+            journal + "[dim]\n" + doi,
         )
 
-
     # Render
-    return table, 'blue', 'Publications'
+    return table
 
 
-@render_panel
-def render_posters(pubs):
+def posters(pubs, WIDTH):
+    """
+        Make a table showing presented posters
+
+        Argument:
+            info: dict of presented posters
+    """
     # Make table
     columns = [
-        ('center', 13, None, 1, f'[bold]Date'),
-        (None, None, 'italic', 1, f'[{header}]Title[/{header}]'),
-        (None, None, 'bold', 1, f'[{header}]Authors[/{header}]'),
-        (None, None, 'bold', 1, f'[{header}]Conference[/{header}]'),
-
+        COLUMN(justify="center", width=10, spacer=True, title=f"[bold]Date"),
+        COLUMN(
+            justify="italic",
+            width=30,
+            spacer=True,
+            title=f"[{header}]Title[/{header}]",
+        ),
+        COLUMN(
+            justify="bold",
+            width=30,
+            spacer=True,
+            title=f"[{header}]Authors[/{header}]",
+        ),
+        COLUMN(
+            justify="bold",
+            width=30,
+            spacer=True,
+            title=f"[{header}]Conference[/{header}]",
+        ),
     ]
-    table = make_table(columns)
+    table = make_table(columns, WIDTH=WIDTH)
 
     # Populate table
     for key, (title, authors, conference) in pubs.items():
         if len(authors) > 100:
-            authors = authors[:96] + ' ...'
+            authors = authors[:96] + " ..."
 
-            if 'claudi' not in authors.lower():
-                authors += ' [bold green]F. Claudi[/bold green] ...'
+            if "claudi" not in authors.lower():
+                authors += " [bold green]F. Claudi[/bold green] ..."
 
         table.add_row(
-            '[dim]'+str(key),
-            '',
+            "[dim]" + str(key),
+            "",
             highlight + title,
             "",
             authors,
-            '',
+            "",
             conference,
         )
 
     # Render
-    return table, 'white', 'Posters'
+    return table
 
-@render_panel
-def render_awards(pubs):
+
+def awards(awards, WIDTH):
+    """
+        Make a table showing awards
+
+        Argument:
+            info: dict of awards
+    """
     # Make table
     columns = [
-        ('center', 13, None, 1, f'[bold]Date'),
-        (None, None, 'italic', 1, f'[{header}]Title[/{header}]'),
-        (None, None, 'bold', 1, f'[{header}]Institution[/{header}]'),
-
+        COLUMN(justify="center", width=10, spacer=True, title=f"[bold]Date"),
+        COLUMN(
+            justify="italic",
+            width=30,
+            spacer=True,
+            title=f"[{header}]Title[/{header}]",
+        ),
+        COLUMN(
+            justify="bold",
+            spacer=True,
+            width=30,
+            title=f"[{header}]Institution[/{header}]",
+        ),
     ]
-    table = make_table(columns)
+    table = make_table(columns, WIDTH=WIDTH)
 
     # Populate table
-    for key, (title, institution) in pubs.items():
+    for key, (title, institution) in awards.items():
         table.add_row(
-            '[dim]'+str(key),
-            '',
-            highlight + title,
-            "",
-            institution
+            "[dim]" + str(key), "", highlight + title, "", institution
         )
 
     # Render
-    return table, 'white', 'Awards & Fellowships'
+    return table
 
 
-def render_header():
-    return Markdown('#TITLE\n##subtitle')
+def make_header():
+    """
+        Make a markdown header
+    """
+    return Markdown("#TITLE\n##subtitle")

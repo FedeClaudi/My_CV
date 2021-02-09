@@ -9,7 +9,8 @@ requirements = [
     "pyinspect",
     "myterial",
     "scholarly",
-    "github",
+    "PyGithub",
+    "typer",
 ]
 
 setup(
@@ -34,7 +35,7 @@ setup(
     extras_require={},
     python_requires=">3.6",
     packages=find_namespace_packages(exclude=("tests, examples")),
-    entry_points={"console_scripts": []},
+    entry_points={"console_scripts": ["fccv = cv.cli:main"]},
     include_package_data=True,
     url="https://github.com/FedeClaudi/My_CV",
     author="Federico Claudi",
