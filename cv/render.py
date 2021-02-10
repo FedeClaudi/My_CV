@@ -2,7 +2,7 @@ from rich.markdown import Markdown
 from rich.table import Table
 from rich import box
 
-from myterial import orange, orange_light
+from myterial import orange, orange_light, pink
 
 
 header = f"bold {orange}"
@@ -230,11 +230,7 @@ def publications(pubs, WIDTH):
     # Populate table
     for (_, key), (title, authors, journal, doi) in pubs.items():
         if len(authors) > 40:
-            # authors = authors[:31 - 4] + ' ...\n'
             authors = authors.split(",")[0] + ", ...\n"
-
-            # if 'claudi' not in authors.lower():
-            #     authors += ' [bold green]F. Claudi[/bold green] ...'
 
         table.add_row(
             "[dim]" + str(key),
@@ -287,7 +283,7 @@ def posters(pubs, WIDTH):
             authors = authors[:96] + " ..."
 
             if "claudi" not in authors.lower():
-                authors += " [bold green]F. Claudi[/bold green] ..."
+                authors += f" [bold {pink}]F. Claudi[/bold {pink}] ..."
 
         table.add_row(
             "[dim]" + str(key),

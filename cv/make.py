@@ -17,6 +17,7 @@ from myterial import (
     orange_dark,
     salmon,
     grey,
+    pink,
 )
 
 from cv import info
@@ -124,11 +125,7 @@ def gscholar_bio(me, WIDTH):
     )
 
     return Panel(
-        bio.tb,
-        expand=True,
-        # width=WIDTH,
-        border_style=bio.dim,
-        padding=(0, 2, 1, 2),
+        bio.tb, expand=True, border_style=bio.dim, padding=(0, 2, 1, 2),
     )
 
 
@@ -185,7 +182,7 @@ def pubs(WIDTH):
         formatted_auths = ""
         for author in auths.split(","):
             if author.strip() in names:
-                formatted_auths += f"[bold green]{author}[/bold green],"
+                formatted_auths += f"[bold {pink}]{author}[/bold {pink}],"
             else:
                 formatted_auths += f"[{blue_grey}]{author}[/{blue_grey}],"
 
