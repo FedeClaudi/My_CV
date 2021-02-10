@@ -40,7 +40,7 @@ class CV:
 
         # try to get projects info from github
         try:
-            projs = make.projs(self.WIDTH)
+            projs = make.projs(self.WIDTH - 12)
         except Exception:  # too many API requests
             print("Could not get github projects info, likely API problems")
             projs = ""

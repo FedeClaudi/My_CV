@@ -19,13 +19,18 @@ open_source_projs = {
     ],
     "brainrender": [
         "brainrender is a python package for the visualization of three dimensional neuro-anatomical data. The goal of brainrender is to facilitate the exploration and dissemination of neuro-anatomical data.",
-        "BrancoLab/BrainRender",
+        "brainglobe/brainrender",
         "https://docs.brainrender.info/",
     ],
     "pyinspect": [
         "pyinspect, the python package for lazy programmers. Inspect your code, improve tracebacks and automatic googling for bug fixes.",
         "FedeClaudi/pyinspect",
-        None,
+        "https://github.com/FedeClaudi/pyinspect",
+    ],
+    "refy": [
+        "A better literature recomendation system.",
+        "FedeClaudi/refy",
+        "https://github.com/FedeClaudi/refy",
     ],
 }
 

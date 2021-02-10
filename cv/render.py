@@ -71,7 +71,7 @@ def education(info, WIDTH):
     columns = [
         COLUMN(justify="center", width=10, spacer=True, title=f"[bold]Date"),
         COLUMN(spacer=True, width=30, title=f"[{header}]Title"),
-        COLUMN(spacer=True, title=f"[{header}]Supervisor"),
+        COLUMN(spacer=True, width=30, title=f"[{header}]Supervisor"),
         COLUMN(justify="bold", width=20, title=f"[{header}]Insitute"),
     ]
     table = make_table(columns, WIDTH=WIDTH)
@@ -107,6 +107,7 @@ def extracurr_education(info, WIDTH):
             width=30,
             title=f"[{header}]Insitute[/{header}]",
         ),
+        COLUMN(width=20),
     ]
     table = make_table(columns, WIDTH=WIDTH)
 
@@ -191,6 +192,7 @@ def teaching(experience, WIDTH):
             width=30,
             title=f"[{header}]Insitute[/{header}]",
         ),
+        COLUMN(width=20),
     ]
     table = make_table(columns, WIDTH=WIDTH)
 
@@ -215,13 +217,13 @@ def publications(pubs, WIDTH):
     columns = [
         COLUMN(justify="center", width=10, spacer=True, title=f"[bold]Date"),
         COLUMN(
-            width=50,
+            width=30,
             justify="italic",
             spacer=True,
             title=f"[{header}]Title[/{header}]",
         ),
-        COLUMN(width=20, spacer=True, title=f"[{header}]Authors[/{header}]"),
-        COLUMN(title=f"[{header}]Journal[/{header}]"),
+        COLUMN(width=30, spacer=True, title=f"[{header}]Authors[/{header}]"),
+        COLUMN(width=20, title=f"[{header}]Journal[/{header}]"),
     ]
     table = make_table(columns, WIDTH=WIDTH)
 
@@ -272,7 +274,7 @@ def posters(pubs, WIDTH):
         ),
         COLUMN(
             justify="bold",
-            width=30,
+            width=20,
             spacer=True,
             title=f"[{header}]Conference[/{header}]",
         ),
@@ -323,6 +325,7 @@ def awards(awards, WIDTH):
             width=30,
             title=f"[{header}]Institution[/{header}]",
         ),
+        COLUMN(width=20),
     ]
     table = make_table(columns, WIDTH=WIDTH)
 
