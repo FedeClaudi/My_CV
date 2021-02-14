@@ -152,6 +152,7 @@ posters = {
         "Fast unsupervised learning and innate heuristics support escape path selection",
         "[bold green]Federico Claudi[/bold green], Dario Campagner, Tiago Branco",
         "Bernstein Conference",
+        "",
     ]
 }
 

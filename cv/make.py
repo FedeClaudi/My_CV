@@ -8,12 +8,12 @@ from myterial import (
     blue_light,
     orange,
     orange_light,
-    green,
+    green_light,
     amber,
     salmon_light,
     blue_grey,
     blue_grey_light,
-    green_dark,
+    green,
     orange_dark,
     salmon,
     grey,
@@ -61,7 +61,10 @@ def projs(WIDTH):
     git = Github("FedeClaudi", secrets.gh_pswd)
 
     projs = pi.Report(
-        "Open source projects", color=green, accent=green, dim=green_dark
+        "Open source projects",
+        color=green_light,
+        accent=green_light,
+        dim=green,
     )
     projs.width = WIDTH
     projs.tb.expand = True
@@ -73,7 +76,7 @@ def projs(WIDTH):
     for name in sorted_projs:
         descr, github, url = info.open_source_projs[name]
 
-        projs.add(f"[{green}]" + name)
+        projs.add(f"[{green_light}]" + name)
         projs.add(descr)
 
         projs.spacer()
