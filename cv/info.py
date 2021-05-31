@@ -119,19 +119,31 @@ teaching_experience = {
 }
 
 publications = {
-    (1, 2020): [
+    (1, 2021): [
+        "Visualizing anatomically registered data with brainrender.",
+        "[bold green]F Claudi[/bold green], AL Tyson, L Petrucco, TW Margrie, R Portugues, T Branco",
+        "[italic]eLife",
+        "[link=https://elifesciences.org/articles/65751]doi.org/10.7554/eLife.65751",
+    ],
+    (2, 2021): [
+        "Tools for accurate post hoc determination of marker location within whole-brain microscopy images.",
+        "Adam L Tyson, Mateo Vélez-Fort, Charly V Rousseau, Lee Cossell, Chryssanthi Tsitoura, Horst A Obenhaus, [bold green]Federico Claudi[/bold green], Stephen C Lenzi, Tiago Branco, Troy W Margrie",
+        "[italic]bioRxiv",
+        "[link=https://www.biorxiv.org/content/10.1101/2021.05.21.445133v1.abstract]doi.org/10.1101/2021.05.21.445133 ",
+    ],
+    (3, 2020): [
         "BrainGlobe Atlas API: a common interface for neuroanatomical atlases.",
         "[bold green]Federico Claudi[/bold green], Luigi Petrucco, Adam L. Tyson, TiagoBranco, Troy W. Margrie, and Ruben Portugues",
         "Journal of Open Source Software",
         "[link=https://doi.org/10.21105/joss.02668]doi.org/10.21105/joss.02668",
     ],
-    (2, 2020): [
+    (4, 2020): [
         "Brainrender. A python based software for visualisation of neuroanatomical and morphological data\n",
         "[bold green]Federico Claudi[/bold green], Adam L. Tyson, Tiago Branco",
         "[italic]bioRxiv (2020)",
         "[link=https://doi.org/10.1101/2020.02.23.96174]doi.org/10.1101/2020.02.23.96174",
     ],
-    (3, 2019): [
+    (5, 2019): [
         "Cerebellar-recipient motor thalamus drives behavioral context-specific movement initiation",
         "Joshua Dacre, Matt Colligan, Julian Ammer, Julia Schiemann, Thomas Clarke, Victor Chamosa-"
         + "Pino, [bold green]Federico Claudi[/bold green], J. Alex Harston, Constantinos Eleftheriou, Janelle M.P. Pakan, Cheng-Chiu"
@@ -139,7 +151,7 @@ publications = {
         "[italic]bioRxiv (2019)",
         "[link=https://doi.org/10.1101/80212]doi.org/10.1101/802124",
     ],
-    (4, 2016): [
+    (6, 2016): [
         "CXCL4 and CXCL4L1 Differentially Affect Monocyte Survival and Dendritic Cell Differentiation and Phagocytosis.",
         "Gouwy M, Ruytinx P, Radice E, [bold green]Claudi F[/bold green], Van Raemdonck K, Bonecchi R",
         "[italic]PLoS ONE (2016)",
