@@ -264,3 +264,6 @@ def cv(WIDTH):
     CV.add(render.awards(info.awards, WIDTH), "rich")
 
     return CV
+
+if __name__=='__main__':
+    cv(180)
