@@ -104,13 +104,17 @@ extracurr_education = {
 }
 
 teaching_experience = {
+    (20202019): [
+        f"[link=https://www.xhmfoundation.com/braincamp-kosovo-2020s]Teacher at [{highlight}]Braincamp",
+        "XhM Foundation",
+    ],
     (2020): [
         f"Teaching Assistant at [{highlight}]NeuroMatchAcademy.",
         "Neuromatch Academy",
     ],
     (2019): [
         f"[link=https://www.xhmfoundation.com/braincamp-kosovo-2019]Teacher at [{highlight}]Braincamp",
-        "ATOMI institute,[dim] Pristina",
+        "XhM Foundation",
     ],
     (2016): [
         "Training of colleagues in microsurgical and behavioural techniques",
